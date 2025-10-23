@@ -1,0 +1,213 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Logo Link */
+.logoLink {
+  text-decoration: none !important;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.logoText {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none !important;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLinkWrapper {
+  text-decoration: none !important;
+}
+
+.navLink {
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  text-decoration: none !important;
+  display: block;
+}
+
+.navLink:hover {
+  color: var(--primary-color);
+  text-decoration: none !important;
+}
+
+.navLink.active {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+.activeIndicator {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.iconButton {
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: var(--text-dark);
+  cursor: pointer;
+  text-decoration: none !important;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconButton:hover {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color);
+  text-decoration: none !important;
+}
+
+.cartButton {
+  position: relative;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: var(--text-dark);
+  cursor: pointer;
+  text-decoration: none !important;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartButton:hover {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color);
+  text-decoration: none !important;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.menuButton {
+  display: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.mobileNavLinkWrapper {
+  text-decoration: none !important;
+}
+
+.mobileNavLink {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none !important;
+  display: block;
+}
+
+.mobileNavLink:hover,
+.mobileNavLink.active {
+  background: #f9fafb;
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none !important;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .menuButton {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: flex;
+  }
+
+  .headerContainer {
+    padding: 0 1rem;
+  }
+}
